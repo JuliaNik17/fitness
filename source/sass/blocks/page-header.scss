@@ -1,0 +1,57 @@
+.page-header {
+  z-index: 5;
+}
+
+.page-header__wrapper {
+  width: 85%;
+  margin: 30px auto 0;
+  display: flex;
+
+  @include vp-1199 {
+    width: 90%;
+    margin: 40px auto 0;
+  }
+
+  @include vp-767 {
+    margin-top: 20px;
+  }
+}
+
+.page-header img {
+  @include vp-1199 {
+    width: 82px;
+    height: 17px;
+    margin-left: 5px;
+  }
+
+  @include vp-767 {
+    width: 68px;
+    height: 15px;
+    margin-left: 0;
+  }
+}
+
+.page-header__phone {
+  color: $color-default-white;
+  text-decoration: none;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  margin-left: auto;
+
+  @include vp-1199 {
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: unset;
+    margin-right: 5px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    margin-right: 0;
+  }
+}

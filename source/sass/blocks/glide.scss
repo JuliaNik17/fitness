@@ -1,0 +1,171 @@
+.glide {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.glide__slide {
+  display: flex;
+  position: relative;
+  width: 260px;
+  // height: 294px;
+
+  &:hover .glide__info {
+    z-index: 5;
+  }
+
+  &:hover .glide__card h3 {
+    opacity: 0;
+  }
+}
+
+.glide__card {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 294px;
+  z-index: 3;
+
+  @include vp-767 {
+    height: 274px;
+  }
+}
+
+.glide__card h3 {
+  color: $color-default-white;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  margin: -50px auto 30px;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.glide__card img {
+  width: 100vw;
+  height: 294px;
+
+  @include vp-767 {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.glide__info {
+  width: 260px;
+  height: 294px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-sapphire;
+  opacity: 0.89;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+
+  @include vp-767 {
+    width: 100%;
+    height: 274px;
+  }
+}
+
+.glide__info h3 {
+  color: $color-default-white;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  margin: 50px auto -2px;
+
+  @include vp-767 {
+    margin-top: 40px;
+  }
+}
+
+.glide__info p {
+  color: $color-default-white;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0 auto 32px;
+
+  @include vp-767 {
+    margin-bottom: 33px;
+  }
+}
+
+.glide__list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin: 0 auto 34px;
+
+  @include vp-767 {
+    margin-bottom: 14px;
+  }
+}
+
+.glide__item {
+  color: $color-default-white;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  margin: 0 0 13px;
+  display: flex;
+  position: relative;
+  padding-left: 22px;
+
+  &::before {
+    content: "";
+    background-image: url("../img/sprite/list_style.svg");
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+  }
+}
+
+.glide button {
+  border: none;
+  background-color: unset;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-chambray;
+    border-radius: 10%;
+  }
+}
+
+.glide__arrow--left {
+  position: absolute;
+  top: 44%;
+  left: -5.4%;
+
+  @include vp-767 {
+    top: 46.5%;
+    left: -17%;
+  }
+}
+
+.glide__arrow--right {
+  position: absolute;
+  top: 44%;
+  right: -5.4%;
+
+  @include vp-767 {
+    top: 46.5%;
+    right: -17%;
+  }
+}
+
+.glide__arrows img {
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
+}

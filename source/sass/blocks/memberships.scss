@@ -1,0 +1,71 @@
+.memberships {
+  width: 100%;
+  background-color: $color-ghost-white;
+  display: flex;
+  position: relative;
+  overflow-y: visible;
+}
+
+.memberships::after {
+  content: "";
+  width: 321px;
+  height: 494px;
+  position: absolute;
+  right: -35px;
+  bottom: -150px;
+  z-index: 3;
+  background-image: url("../img/sprite/gym_memberships_decoration.svg");
+
+  @include vp-1199 {
+    width: 347px;
+    height: 444px;
+    right: 0;
+    bottom: -120px;
+    background-image: url("../img/sprite/gym_membership_decoration_tablet.svg");
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.memberships__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 87%;
+  margin: 122px auto 110px;
+  z-index: 5;
+
+  @include vp-1199 {
+    width: 70%;
+    margin: 100px auto;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin: 70px 0;
+    padding: 0 15px;
+  }
+}
+
+.memberships__wrapper h2 {
+  color: $color-sapphire;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  margin: 0 auto 30px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,243 @@
+.tabs {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tabs__content {
+  display: flex;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.tabs__list {
+  list-style: none;
+  padding-left: 0;
+  display: none;
+}
+
+.tabs__list--active {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  margin-top: 37px;
+
+  @include vp-1199 {
+    width: 82%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 45px auto 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    grid-gap: 35px;
+    margin: 35px 0 0;
+  }
+}
+
+.tabs__list--active li {
+  background-color: $color-default-white;
+  border: 7px solid $color-default-white;
+
+  &:hover,
+  &:focus-visible {
+    border: 7px solid;
+    border-image-slice: 1;
+    border-image-source: $red-to-navy-blue;
+  }
+}
+
+.tabs__list--active h3 {
+  color: $color-sapphire;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+  margin: 57px auto 10px;
+  text-align: center;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 43px auto 10px;
+  }
+}
+
+.tabs__list--active p {
+  color: $color-chambray;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 auto 65px;
+  text-align: center;
+
+  @include vp-767 {
+    margin-bottom: 55px;
+  }
+}
+
+.tabs__cost {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include vp-767 {
+    padding-left: 7px;
+  }
+}
+
+.tabs__list--active strong {
+  color: $color-egyptian-blue;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  width: fit-content;
+  z-index: 5;
+
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 72px;
+  }
+}
+
+.tabs__list--active span {
+  color: $color-sapphire;
+  margin-left: 12px;
+
+  @include vp-767 {
+    margin-left: 7px;
+  }
+}
+
+.tabs__list--active b {
+  color: $color-whisper;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150px;
+  opacity: 0.48;
+  text-align: center;
+  margin: -140px auto 0;
+  z-index: 1;
+
+  @include vp-767 {
+    font-size: 80px;
+    line-height: 120px;
+    margin-top: -120px;
+  }
+}
+
+.tabs__list--active a {
+  display: block;
+  color: $color-sapphire;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 25px auto 60px;
+  padding: 24px 0;
+  text-align: center;
+  border: 2px solid $color-sapphire;
+  width: 206px;
+  height: 64px;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-default-white;
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    border: none;
+  }
+
+  @include vp-767 {
+    width: 75%;
+    height: 66px;
+    padding-top: 26px;
+    margin: 27px auto 49px;
+  }
+}
+
+.tabs__bar {
+  display: flex;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  justify-content: space-between;
+
+  @include vp-1199 {
+    width: 62%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.tabs__controls {
+  color: $color-sapphire;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  padding-bottom: 12px;
+
+  &:focus-visible,
+  &:hover {
+    opacity: 1;
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.tabs__controls--active {
+  opacity: 1;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $color-crimson;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+
+    @include vp-1199 {
+      bottom: -2px;
+      width: 60px;
+      right: 3px;
+    }
+
+    @include vp-767 {
+      right: 0;
+      left: 2px;
+    }
+  }
+}
+
+.tabs__controls--year {
+  padding-left: 3px;
+  padding-right: 9px;
+}

@@ -18,6 +18,24 @@
 // Blocks
 // ---------------------------------
 
+@import "blocks/page";
+@import "blocks/wrapper";
+@import "blocks/page-header";
+@import "blocks/intro";
+@import "blocks/gym";
+@import "blocks/memberships";
+@import "blocks/tabs";
+@import "blocks/promo";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@import "blocks/coaches";
+@import "blocks/glide";
+@import "blocks/advantages";
+@import "blocks/sales";
+@import "blocks/feedbacks";
+@import "blocks/carousel";
+@import "blocks/contacts";
+@import "blocks/page-footer";
 @import "blocks/btn";
 @import "blocks/modal";
 

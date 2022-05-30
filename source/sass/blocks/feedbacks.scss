@@ -1,0 +1,139 @@
+.feedbacks {
+  display: flex;
+  width: 100%;
+}
+
+.feedbacks__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto 121px;
+
+  @include vp-1199 {
+    width: 95%;
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 70px;
+    padding: 0 15px;
+  }
+}
+
+.feedbacks__wrapper h2 {
+  color: $color-sapphire;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  margin: 0 auto 50px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 41px;
+  }
+}
+
+.feedbacks__carousel {
+  // width: 60%;
+  width: fit-content;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+}
+
+.feedbacks__carousel ul {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+}
+
+.feedbacks__carousel li img {
+  position: absolute;
+  top: 25%;
+  left: 11%;
+
+  @include vp-767 {
+    width: 68px;
+    height: 68px;
+    top: 12%;
+    left: 19%;
+  }
+}
+
+.feedbacks__carousel h3 {
+  color: $color-default-white;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  margin-left: 125px;
+
+  @include vp-767 {
+    line-height: 26px;
+    margin-top: 44px;
+    margin-left: 120px;
+    margin-bottom: 24px;
+  }
+}
+
+.feedbacks__carousel p {
+  color: $color-default-white;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-left: 125px;
+  margin-bottom: 10px;
+
+  @include vp-767 {
+    // width: 98%;
+    margin: 0 auto 30px;
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+
+.feedbacks__carousel button {
+  background-color: unset;
+  border: none;
+  display: block;
+  height: fit-content;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 44%;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-chambray;
+    border-radius: 20%;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: unset;
+    background-color: unset;
+  }
+
+  @include vp-767 {
+    top: 47%;
+  }
+}
+
+.feedbacks__carousel button img {
+  width: 10px;
+  height: 19px;
+}
