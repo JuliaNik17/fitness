@@ -25,8 +25,13 @@
   height: 294px;
   z-index: 3;
 
+  @include vp-1199 {
+    width: 100%;
+  }
+
   @include vp-767 {
-    height: 274px;
+    // height: 274px;
+    height: 100%;
   }
 }
 
@@ -36,7 +41,7 @@
   font-size: 18px;
   line-height: 27px;
   font-weight: 700;
-  margin: -50px auto 30px;
+  margin: -50px auto 22px;
 
   @include vp-767 {
     margin-bottom: 20px;
@@ -54,8 +59,8 @@
 }
 
 .glide__info {
-  width: 260px;
-  height: 294px;
+  width: 99%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: $color-sapphire;
@@ -65,9 +70,13 @@
   left: 0;
   overflow-y: auto;
 
+  @include vp-1199 {
+    width: 100%;
+  }
+
   @include vp-767 {
     width: 100%;
-    height: 274px;
+    height: 100%;
   }
 }
 

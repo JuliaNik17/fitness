@@ -66,9 +66,17 @@ window.addEventListener('DOMContentLoaded', () => {
     type: 'carousel',
     startAt: 0,
     perView: 4,
-    gap: 40,
+    gap: 38,
     breakpoints: {
+      1280: {
+        perView: 4,
+        gap: 16,
+      },
       1199: {
+        perView: 3,
+        gap: 30,
+      },
+      950: {
         perView: 2,
         gap: 30,
       },

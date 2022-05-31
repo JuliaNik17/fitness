@@ -713,7 +713,7 @@ button,
 
 .intro {
   width: 100%;
-  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   margin-top: -56px;
   padding-top: 51px;
 }
@@ -850,7 +850,7 @@ button,
 .gym__wrapper {
   width: 85%;
   max-width: 1160px;
-  margin: 120px auto;
+  margin: 120px auto 233px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -917,9 +917,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  margin-top: -115px;
-  margin-left: -63px;
+  position: absolute;
+  top: 18.1%;
+  left: 39.5%;
 }
 
 .gym__video-poster {
@@ -956,14 +956,9 @@ button,
   opacity: 0.8;
 }
 
-.gym__video img {
-  width: 52px;
-  height: 52px;
-}
-
 .memberships {
   width: 100%;
-  background-color: #F8F9FC;
+  background-color: #f8f9fc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1043,7 +1038,7 @@ button,
 .tabs__list--active li:focus-visible {
   border: 7px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  border-image-source: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
 }
 
 .tabs__list--active h3 {
@@ -1057,7 +1052,7 @@ button,
 }
 
 .tabs__list--active p {
-  color: #495A7D;
+  color: #495a7d;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1078,7 +1073,7 @@ button,
 }
 
 .tabs__list--active strong {
-  color: #103AAE;
+  color: #103aae;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 60px;
@@ -1100,7 +1095,7 @@ button,
 }
 
 .tabs__list--active b {
-  color: #E8E8E8;
+  color: #e8e8e8;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 100px;
@@ -1131,8 +1126,8 @@ button,
 .tabs__list--active a:hover,
 .tabs__list--active a:focus-visible {
   color: #ffffff;
-  background: -o-linear-gradient(352.95deg, #ED0233 17.6%, #003EB7 95.31%);
-  background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   border: none;
 }
 
@@ -1176,7 +1171,7 @@ button,
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #D10A42;
+  background-color: #d10a42;
   position: absolute;
   bottom: -2px;
   right: 0;
@@ -1206,7 +1201,7 @@ button,
 
 .promo__info {
   width: 43%;
-  background-color: #ED0233;
+  background-color: #ed0233;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1258,7 +1253,7 @@ button,
 }
 
 .promo__item--date::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 64px;
   height: 1px;
@@ -1268,7 +1263,7 @@ button,
 }
 
 .promo__item--time::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 88px;
   height: 1px;
@@ -1355,7 +1350,7 @@ button,
 
 .promo__picture {
   width: 57%;
-  background-color: #1C3374;
+  background-color: #1c3374;
 }
 
 .promo__picture img {
@@ -1521,7 +1516,7 @@ button,
   font-size: 18px;
   line-height: 27px;
   font-weight: 700;
-  margin: -50px auto 30px;
+  margin: -50px auto 22px;
 }
 
 .glide__card img {
@@ -1530,8 +1525,8 @@ button,
 }
 
 .glide__info {
-  width: 260px;
-  height: 294px;
+  width: 99%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1592,7 +1587,7 @@ button,
 }
 
 .glide__item::before {
-  content: '';
+  content: "";
   background-image: url("../img/sprite/list_style.svg");
   width: 6px;
   height: 6px;
@@ -1608,7 +1603,7 @@ button,
 
 .glide button:hover,
 .glide button:focus-visible {
-  background-color: #495A7D;
+  background-color: #495a7d;
   border-radius: 10%;
 }
 
@@ -1629,7 +1624,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  background-color: #F8F9FC;
+  background-color: #f8f9fc;
 }
 
 .advantages__wrapper {
@@ -1671,10 +1666,10 @@ button,
 
 .advantages__list::before,
 .advantages__list::after {
-  content: '';
+  content: "";
   width: 340px;
   height: 2px;
-  background-color: #D10A42;
+  background-color: #d10a42;
   opacity: 0.8;
   position: absolute;
   top: 47%;
@@ -1721,10 +1716,11 @@ button,
   font-size: 71px;
   line-height: 106px;
   font-weight: 700;
-  background-color: #0041CA;
-  background-image: -o-linear-gradient(322.39deg, #D10A42 0%, #0041CA 45.58%);
-  background-image: linear-gradient(127.61deg, #D10A42 0%, #0041CA 45.58%);
+  background-color: #0041ca;
+  background-image: -o-linear-gradient(322.39deg, #d10a42 0%, #0041ca 45.58%);
+  background-image: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1734,7 +1730,7 @@ button,
   line-height: 21px;
   font-weight: 400;
   margin: -20px 0 0;
-  color: #2E35AC;
+  color: #2e35ac;
 }
 
 .advantages__info {
@@ -1770,7 +1766,7 @@ button,
 .advantages__item--blue {
   max-width: 240px;
   width: 90%;
-  background-color: #1C3374;
+  background-color: #1c3374;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1879,7 +1875,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  background-color: #ED0233;
+  background-color: #ed0233;
   padding: 35px 35px 41px 45px;
   width: 50%;
 }
@@ -1934,8 +1930,8 @@ button,
 
 .sales__red-info a:hover,
 .sales__red-info a:focus-visible {
-  color: #1C3374;
-  border-bottom: 1px solid #1C3374;
+  color: #1c3374;
+  border-bottom: 1px solid #1c3374;
 }
 
 .sales__list {
@@ -1963,12 +1959,12 @@ button,
   flex-direction: column;
   border: 7px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  border-image-source: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   padding: 20px;
 }
 
 .sales__item h4 {
-  color: #1C3374;
+  color: #1c3374;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 26px;
   line-height: 35px;
@@ -1979,7 +1975,7 @@ button,
 }
 
 .sales__item p {
-  color: #1C3374;
+  color: #1c3374;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -1995,7 +1991,7 @@ button,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  color: #1C3374;
+  color: #1c3374;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 12px;
   line-height: 14px;
@@ -2005,13 +2001,13 @@ button,
   margin-bottom: 7px;
   margin-left: 5px;
   padding-bottom: 1px;
-  border-bottom: 1px solid #1C3374;
+  border-bottom: 1px solid #1c3374;
 }
 
 .sales__item a:hover,
 .sales__item a:focus-visible {
-  color: #D10A42;
-  border-bottom: 1px solid #D10A42;
+  color: #d10a42;
+  border-bottom: 1px solid #d10a42;
 }
 
 .sales__item br {
@@ -2103,11 +2099,13 @@ button,
   height: fit-content;
   margin: 0;
   cursor: pointer;
+  position: absolute;
+  top: 44%;
 }
 
 .feedbacks__carousel button:hover,
 .feedbacks__carousel button:focus-visible {
-  background-color: #495A7D;
+  background-color: #495a7d;
   border-radius: 20%;
 }
 
@@ -2115,11 +2113,6 @@ button,
   opacity: 0.5;
   cursor: unset;
   background-color: unset;
-}
-
-.feedbacks__carousel button {
-  position: absolute;
-  top: 44%;
 }
 
 .feedbacks__carousel button img {
@@ -2143,7 +2136,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #1C3374;
+  background-color: #1c3374;
   -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   -webkit-box-orient: vertical;
@@ -2233,7 +2226,7 @@ button,
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-  border-bottom: 1px solid #74819C;
+  border-bottom: 1px solid #74819c;
   padding: 0;
   padding-bottom: 6px;
 }
@@ -2275,8 +2268,8 @@ button,
 
 .contacts__form button:hover,
 .contacts__form button:focus-visible {
-  color: #0041CA;
-  border: 3px solid #0041CA;
+  color: #0041ca;
+  border: 3px solid #0041ca;
   background-color: #ffffff;
 }
 
@@ -2288,7 +2281,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-top: 1px solid #74819C;
+  border-top: 1px solid #74819c;
 }
 
 .contacts__info h2 {
@@ -2315,11 +2308,11 @@ button,
   margin: 0 auto 40px 125px;
 }
 
-.contacts__list:before {
-  content: '';
+.contacts__list::before {
+  content: "";
   width: 1px;
   height: 102px;
-  background-color: #74819C;
+  background-color: #74819c;
   position: absolute;
   top: 20px;
   left: 50%;
@@ -2377,14 +2370,14 @@ button,
 .contacts__column a:hover,
 .contacts__column a:focus-visible {
   opacity: 0.8;
-  color: #0041CA;
+  color: #0041ca;
 }
 
 .page-footer {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  background-color: #030A1A;
+  background-color: #030a1a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2719,7 +2712,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     width: 90%;
-    margin: 102px auto;
+    margin: 102px auto 185px;
   }
 
   .gym__info {
@@ -2760,7 +2753,8 @@ button,
   .gym__video {
     width: 266px;
     height: 167px;
-    margin: -85px auto 0;
+    top: 16.05%;
+    left: 32.5%;
   }
 
   .gym__video iframe {
@@ -2774,7 +2768,7 @@ button,
     background: url("../img/sprite/play_border_tablet.svg") no-repeat;
     margin: 0;
     padding: 10px;
-    top: 29%;
+    top: 27%;
     left: 36%;
   }
 
@@ -2900,6 +2894,14 @@ button,
     font-size: 42px;
     line-height: 42px;
     margin: 0 auto 40px;
+  }
+
+  .glide__card {
+    width: 100%;
+  }
+
+  .glide__info {
+    width: 100%;
   }
 
   .advantages__wrapper {
@@ -3085,7 +3087,7 @@ button,
     margin-left: 133px;
   }
 
-  .contacts__list:before {
+  .contacts__list::before {
     height: 129px;
     top: 5%;
     left: 58%;
@@ -3254,6 +3256,9 @@ button,
 
   .gym__video {
     width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
     margin: 40px 0 0;
   }
 
@@ -3382,7 +3387,7 @@ button,
   }
 
   .glide__card {
-    height: 274px;
+    height: 100%;
   }
 
   .glide__card h3 {
@@ -3396,7 +3401,7 @@ button,
 
   .glide__info {
     width: 100%;
-    height: 274px;
+    height: 100%;
   }
 
   .glide__info h3 {
@@ -3580,7 +3585,6 @@ button,
 
   .feedbacks__carousel h3 {
     line-height: 26px;
-    margin-bottom: 34px;
     margin-top: 44px;
     margin-left: 120px;
     margin-bottom: 24px;
@@ -3665,7 +3669,7 @@ button,
     margin: 0 16px 42px;
   }
 
-  .contacts__list:before {
+  .contacts__list::before {
     display: none;
   }
 
