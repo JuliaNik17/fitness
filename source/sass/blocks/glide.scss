@@ -54,7 +54,7 @@
 
   @include vp-767 {
     width: 100%;
-    height: 100vh;
+    height: 276px;
   }
 }
 
@@ -142,6 +142,7 @@
 .glide button {
   border: none;
   background-color: unset;
+  cursor: pointer;
 
   &:hover,
   &:focus-visible {

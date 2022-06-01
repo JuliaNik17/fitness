@@ -78,7 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },
       950: {
         perView: 2,
-        gap: 30,
+        gap: 42,
       },
       767: {
         perView: 1,

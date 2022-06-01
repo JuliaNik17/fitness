@@ -1599,6 +1599,7 @@ button,
 .glide button {
   border: none;
   background-color: unset;
+  cursor: pointer;
 }
 
 .glide button:hover,
@@ -2404,15 +2405,14 @@ button,
 }
 
 .page-footer__nav {
-  width: 45%;
+  width: 50%;
   margin: 0 auto 0 230px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .page-footer__column li {
@@ -2448,6 +2448,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .page-footer__social {
@@ -2460,6 +2462,9 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .page-footer__social li {
@@ -2480,7 +2485,7 @@ button,
 }
 
 .page-footer__social-item--vk img {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .btn {
@@ -3125,6 +3130,8 @@ button,
   .page-footer__nav {
     width: 70%;
     margin: 0 auto;
+    -ms-grid-columns: 1.3fr 2fr;
+    grid-template-columns: 1.3fr 2fr;
   }
 
   .page-footer__column li {
@@ -3141,6 +3148,7 @@ button,
 
   .page-footer__social-item--vk img {
     padding-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -3396,7 +3404,7 @@ button,
 
   .glide__card img {
     width: 100%;
-    height: 100vh;
+    height: 276px;
   }
 
   .glide__info {
@@ -3700,12 +3708,10 @@ button,
 
   .page-footer__nav {
     width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
     margin-top: -20px;
     margin-bottom: 21px;
+    -ms-grid-columns: 1fr 1.4fr;
+    grid-template-columns: 1fr 1.4fr;
   }
 
   .page-footer__column {
