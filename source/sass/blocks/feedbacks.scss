@@ -134,6 +134,8 @@
 }
 
 .feedbacks__carousel button img {
-  width: 10px;
-  height: 19px;
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
 }

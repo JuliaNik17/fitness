@@ -81,7 +81,7 @@
                 <div class="gym__video-poster">
                   <button class="gym__video-button"><img src="img/sprite/play_icon.svg" width="72" height="72" alt="Кнопка play"></button>
                 </div>
-                <iframe class="gym__video-iframe" width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="gym__video-iframe" width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen tabindex="-1"></iframe>
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@
             <div class="glide">
               <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
-                  <li class="glide__slide">
+                  <li class="glide__slide" tabindex="0">
                     <div class="glide__card">
                       <!--1x: 260px; 2x: 520px-->
                       <img src="img/content/coach1.jpg" srcset="img/content/coach1@2x.jpg" width="260" height="294" alt="Портрет тренера Анны Павловой">
@@ -240,7 +240,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="glide__slide">
+                  <li class="glide__slide" tabindex="0">
                     <div class="glide__card">
                       <!--1x: 260px; 2x: 520px-->
                       <img src="img/content/coach2.jpg" srcset="img/content/coach2@2x.jpg" width="260" height="294" alt="Портрет тренера Алексея Лаврова">
@@ -256,7 +256,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="glide__slide">
+                  <li class="glide__slide" tabindex="0">
                     <div class="glide__card">
                       <!--1x: 260px; 2x: 520px-->
                       <img src="img/content/coach3.jpg" srcset="img/content/coach3@2x.jpg" width="260" height="294" alt="Портрет тренера Александра Пашкова">
@@ -272,7 +272,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="glide__slide">
+                  <li class="glide__slide" tabindex="0">
                     <div class="glide__card">
                       <!--1x: 260px; 2x: 520px-->
                       <img src="img/content/coach4.jpg" srcset="img/content/coach4@2x.jpg" width="260" height="294" alt="Портрет тренера Марии Кетовой">
@@ -288,7 +288,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="glide__slide">
+                  <li class="glide__slide" tabindex="0">
                     <div class="glide__card">
                       <!--1x: 260px; 2x: 520px-->
                       <img src="img/content/coach1.jpg" srcset="img/content/coach1@2x.jpg" width="260" height="294" alt="Портрет тренера Анны Павловой">
@@ -304,7 +304,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="glide__slide">
+                  <li class="glide__slide" tabindex="0">
                     <div class="glide__card">
                       <!--1x: 260px; 2x: 520px-->
                       <img src="img/content/coach2.jpg" srcset="img/content/coach2@2x.jpg" width="260" height="294" alt="Портрет тренера Алексея Лаврова">
@@ -320,7 +320,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="glide__slide">
+                  <li class="glide__slide" tabindex="0">
                     <div class="glide__card">
                       <!--1x: 260px; 2x: 520px-->
                       <img src="img/content/coach3.jpg" srcset="img/content/coach3@2x.jpg" width="260" height="294" alt="Портрет тренера Александра Пашкова">
@@ -336,7 +336,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="glide__slide">
+                  <li class="glide__slide" tabindex="0">
                     <div class="glide__card">
                       <!--1x: 260px; 2x: 520px-->
                       <img src="img/content/coach4.jpg" srcset="img/content/coach4@2x.jpg" width="260" height="294" alt="Портрет тренера Марии Кетовой">
@@ -355,8 +355,8 @@
                 </ul>
               </div>
               <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="img/sprite/arrow_left_icon.svg" width="16" height="32" alt="Кнопка предыдущий слайд"></button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="img/sprite/arrow_right_icon.svg" width="16" height="32" alt="Кнопка следующий слайд"></button>
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<" tabindex="0"><img src="img/sprite/arrow_left_icon.svg" width="16" height="32" alt="Кнопка предыдущий слайд"></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">" tabindex="0"><img src="img/sprite/arrow_right_icon.svg" width="16" height="32" alt="Кнопка следующий слайд"></button>
               </div>
             </div>
           </div>
@@ -385,7 +385,7 @@
                   <h6>Современные тренажеры <br> на&nbsp;все группы мышц</h6>
                 </div>
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--parking">
                 <div class="advantages__numbers">
                   <strong>70</strong>
                   <p>машин</p>
@@ -478,7 +478,8 @@
         <section class="contacts">
           <div class="contacts__wrapper">
             <div class="contacts__form">
-              <h2>БЕСПЛАТНОЕ занятие </h2>
+              <div>
+                <h2>БЕСПЛАТНОЕ занятие </h2>
               <form class="form" method="GET" action="https://echo.htmlacademy.ru" target="_blank" autocomplete="off">
                 <fieldset>
                   <ul class="form__list">
@@ -494,6 +495,7 @@
                 </fieldset>
                 <button class="send-button button" type="submit">отправить</button>
               </form>
+              </div>
             </div>
             <div class="contacts__info">
               <h2>Контакты</h2>

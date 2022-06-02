@@ -1,20 +1,49 @@
 .glide {
   max-width: 1160px;
   margin: 0 auto;
+
+  @include vp-1199 {
+    max-width: 616px;
+  }
+
+  @include vp-767 {
+    // max-width: 300px;
+  }
+}
+
+.glide__track {
+  @include vp-1199 {
+    padding-left: 12px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
 }
 
 .glide__slide {
   display: flex;
   position: relative;
   width: 260px;
-  // height: 294px;
 
-  &:hover .glide__info {
+  &:hover .glide__info,
+  &:focus-visible .glide__info,
+  &:focus .glide__info,
+  &:focus-within .glide__info,
+  &:active .glide__info {
     z-index: 5;
   }
 
-  &:hover .glide__card h3 {
+  &:hover .glide__card h3,
+  &:focus-visible .glide__card h3,
+  &:focus .glide__card h3,
+  &:focus-within .glide__card h3,
+  &:active .glide__card h3 {
     opacity: 0;
+  }
+
+  @include vp-1199 {
+    // max-width: 268px;
   }
 }
 
@@ -26,11 +55,12 @@
   z-index: 3;
 
   @include vp-1199 {
-    width: 100%;
+    width: 268px;
+    // margin-left: 8px;
   }
 
   @include vp-767 {
-    // height: 274px;
+    width: 226px;
     height: 100%;
   }
 }
@@ -49,11 +79,11 @@
 }
 
 .glide__card img {
-  width: 100vw;
+  width: 268px;
   height: 294px;
 
   @include vp-767 {
-    width: 100%;
+    width: 226px;
     height: 276px;
   }
 }
@@ -71,11 +101,12 @@
   overflow-y: auto;
 
   @include vp-1199 {
-    width: 100%;
+    width: 266px;
+    left: 0;
   }
 
   @include vp-767 {
-    width: 100%;
+    width: 226px;
     height: 100%;
   }
 }
@@ -107,10 +138,15 @@
 }
 
 .glide__list {
+  width: 90%;
   display: flex;
   flex-direction: column;
   padding-left: 0;
   margin: 0 auto 34px;
+
+  @include vp-1199 {
+    width: 63%;
+  }
 
   @include vp-767 {
     margin-bottom: 14px;
@@ -156,6 +192,10 @@
   top: 44%;
   left: -5.4%;
 
+  @include vp-1199 {
+    left: -8.4%;
+  }
+
   @include vp-767 {
     top: 46.5%;
     left: -17%;
@@ -166,6 +206,10 @@
   position: absolute;
   top: 44%;
   right: -5.4%;
+
+  @include vp-1199 {
+    right: -8.4%;
+  }
 
   @include vp-767 {
     top: 46.5%;

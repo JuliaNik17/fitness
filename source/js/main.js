@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const PHONE_NUMBER_LENGTH = 11;
 
   gymButton.addEventListener('click', () => {
-    iframe.style.opacity = '1';
+    iframe.style.display = 'block';
     gymVideoPoster.style.display = 'none';
     iframe.src += '?autoplay=1';
   });
@@ -73,12 +73,8 @@ window.addEventListener('DOMContentLoaded', () => {
         gap: 16,
       },
       1199: {
-        perView: 3,
-        gap: 30,
-      },
-      950: {
         perView: 2,
-        gap: 42,
+        gap: 10,
       },
       767: {
         perView: 1,

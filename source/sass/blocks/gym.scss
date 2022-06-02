@@ -1,13 +1,17 @@
 .gym__wrapper {
   width: 85%;
   max-width: 1160px;
-  margin: 120px auto 233px;
-  display: flex;
+  margin: 120px auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-gap: 30px;
 
   @include vp-1199 {
+    display: flex;
     flex-direction: column;
     width: 90%;
     margin: 102px auto 185px;
+    grid-gap: 0;
   }
 
   @include vp-767 {
@@ -19,7 +23,6 @@
 .gym__info {
   display: flex;
   flex-direction: column;
-  width: 35%;
   margin-left: 60px;
 
   @include vp-1199 {
@@ -83,11 +86,13 @@
   line-height: 24px;
   margin-top: 0;
   margin-bottom: 8px;
+  padding-right: 35px;
 
   @include vp-1199 {
     text-align: center;
-    width: 83.5%;
+    width: 83.7%;
     margin: 0 auto 43px;
+    padding-right: 0;
   }
 
   @include vp-767 {
@@ -113,6 +118,7 @@
   display: flex;
   flex-direction: column;
   margin-left: auto;
+  position: relative;
 
   @include vp-1199 {
     width: 98%;
@@ -120,8 +126,8 @@
   }
 
   @include vp-767 {
-    width: 100%;
-    margin: 0;
+    width: 320px;
+    margin: 0 auto;
   }
 }
 
@@ -129,6 +135,7 @@
   @include vp-1199 {
     width: 678px;
     height: 345px;
+    margin: 0 auto;
   }
 
   @include vp-767 {
@@ -141,15 +148,18 @@
   width: 364px;
   height: 228px;
   display: flex;
-  position: absolute;
-  top: 18.1%;
-  left: 39.5%;
+  position: relative;
+  margin-left: -63px;
+  margin-top: -115px;
+
+  @include vp-1279 {
+    margin-left: -25px;
+  }
 
   @include vp-1199 {
     width: 266px;
     height: 167px;
-    top: 16.05%;
-    left: 32.5%;
+    margin: -84px auto;
   }
 
   @include vp-767 {
@@ -166,14 +176,13 @@
   background-image: url("../img/content/video_pic.jpg");
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 5;
 }
 
 .gym__video iframe {
-  opacity: 0;
+  display: none;
 
   @include vp-1199 {
     width: 266px;
@@ -217,8 +226,3 @@
     left: 39%;
   }
 }
-
-// .gym__video img {
-//   width: 52px;
-//   height: 52px;
-// }

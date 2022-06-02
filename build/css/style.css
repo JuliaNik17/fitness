@@ -850,10 +850,12 @@ button,
 .gym__wrapper {
   width: 85%;
   max-width: 1160px;
-  margin: 120px auto 233px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 120px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.5fr;
+  grid-gap: 30px;
 }
 
 .gym__info {
@@ -864,7 +866,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 35%;
   margin-left: 60px;
 }
 
@@ -898,6 +899,7 @@ button,
   line-height: 24px;
   margin-top: 0;
   margin-bottom: 8px;
+  padding-right: 35px;
 }
 
 .gym__visual {
@@ -909,6 +911,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   margin-left: auto;
+  position: relative;
 }
 
 .gym__video {
@@ -917,9 +920,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 18.1%;
-  left: 39.5%;
+  position: relative;
+  margin-left: -63px;
+  margin-top: -115px;
 }
 
 .gym__video-poster {
@@ -929,14 +932,13 @@ button,
   background-image: url("../img/content/video_pic.jpg");
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 5;
 }
 
 .gym__video iframe {
-  opacity: 0;
+  display: none;
 }
 
 .gym__video button {
@@ -1319,6 +1321,7 @@ button,
   margin-top: 3px;
   margin-left: 78px;
   margin-bottom: 45px;
+  margin-right: 10px;
 }
 
 .promo__info a {
@@ -1489,11 +1492,19 @@ button,
   width: 260px;
 }
 
-.glide__slide:hover .glide__info {
+.glide__slide:hover .glide__info,
+.glide__slide:focus-visible .glide__info,
+.glide__slide:focus .glide__info,
+.glide__slide:focus-within .glide__info,
+.glide__slide:active .glide__info {
   z-index: 5;
 }
 
-.glide__slide:hover .glide__card h3 {
+.glide__slide:hover .glide__card h3,
+.glide__slide:focus-visible .glide__card h3,
+.glide__slide:focus .glide__card h3,
+.glide__slide:focus-within .glide__card h3,
+.glide__slide:active .glide__card h3 {
   opacity: 0;
 }
 
@@ -1520,7 +1531,7 @@ button,
 }
 
 .glide__card img {
-  width: 100vw;
+  width: 268px;
   height: 294px;
 }
 
@@ -1561,6 +1572,7 @@ button,
 }
 
 .glide__list {
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1665,22 +1677,22 @@ button,
   grid-template-rows: 1fr 1fr;
 }
 
-.advantages__list::before,
-.advantages__list::after {
+.advantages__item--area::before,
+.advantages__item--parking::before {
   content: "";
   width: 340px;
   height: 2px;
   background-color: #d10a42;
   opacity: 0.8;
   position: absolute;
-  top: 47%;
+  bottom: 11px;
 }
 
-.advantages__list::before {
+.advantages__item--area::before {
   left: 3px;
 }
 
-.advantages__list::after {
+.advantages__item--parking::before {
   right: 0;
 }
 
@@ -1752,7 +1764,7 @@ button,
   line-height: 33px;
   font-weight: 700;
   margin-top: 22px;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
 }
 
 .advantages__info p {
@@ -1762,11 +1774,15 @@ button,
   line-height: 22px;
   font-weight: 300;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .advantages__item--blue {
   max-width: 240px;
   width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #1c3374;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1945,8 +1961,8 @@ button,
   padding-left: 0;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -ms-grid-rows: 211px 211px;
-  grid-template-rows: 211px 211px;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 40px;
 }
 
@@ -1983,6 +1999,7 @@ button,
   font-weight: 400;
   margin: 0;
   margin-left: 5px;
+  margin-bottom: 20px;
 }
 
 .sales__item a {
@@ -2116,11 +2133,6 @@ button,
   background-color: unset;
 }
 
-.feedbacks__carousel button img {
-  width: 10px;
-  height: 19px;
-}
-
 .carousel__button-next {
   right: -62px;
 }
@@ -2175,6 +2187,18 @@ button,
   background-color: #102654;
 }
 
+.contacts__form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+}
+
 .contacts__form h2 {
   color: #ffffff;
   font-family: "Bebas Neue", "Arial", sans-serif;
@@ -2183,20 +2207,20 @@ button,
   letter-spacing: 0.03em;
   text-transform: lowercase;
   font-weight: 700;
-  margin: 65px auto 32px 103px;
+  margin: 65px auto 32px 0;
 }
 
 .contacts__form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 60%;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   border: none;
-  margin: 0 auto 70px 103px;
+  margin: 0 0 70px 0;
 }
 
 .contacts__form fieldset {
@@ -2208,6 +2232,7 @@ button,
 .contacts__form ul {
   display: -ms-grid;
   display: grid;
+  width: 86%;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
@@ -2262,6 +2287,7 @@ button,
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  width: 86%;
   padding: 15px 21px;
   cursor: pointer;
   margin-top: 30px;
@@ -2312,11 +2338,11 @@ button,
 .contacts__list::before {
   content: "";
   width: 1px;
-  height: 102px;
+  height: 77%;
   background-color: #74819c;
   position: absolute;
-  top: 20px;
-  left: 50%;
+  top: 7px;
+  left: 56%;
 }
 
 .contacts__column {
@@ -2459,6 +2485,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -2644,6 +2672,12 @@ button,
   }
 }
 
+@media (max-width: 1279px) {
+  .gym__video {
+    margin-left: -25px;
+  }
+}
+
 @media (max-width: 1199px) {
   .page-header__wrapper {
     width: 90%;
@@ -2712,12 +2746,16 @@ button,
   }
 
   .gym__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     width: 90%;
     margin: 102px auto 185px;
+    grid-gap: 0;
   }
 
   .gym__info {
@@ -2737,8 +2775,9 @@ button,
 
   .gym__info p {
     text-align: center;
-    width: 83.5%;
+    width: 83.7%;
     margin: 0 auto 43px;
+    padding-right: 0;
   }
 
   .gym__text-desktop {
@@ -2753,13 +2792,13 @@ button,
   .gym__visual-picture img {
     width: 678px;
     height: 345px;
+    margin: 0 auto;
   }
 
   .gym__video {
     width: 266px;
     height: 167px;
-    top: 16.05%;
-    left: 32.5%;
+    margin: -84px auto;
   }
 
   .gym__video iframe {
@@ -2828,13 +2867,13 @@ button,
   }
 
   .promo__time {
-    margin-top: 48px;
+    margin: 48px auto 0;
   }
 
   .promo__time h2 {
     font-size: 52px;
     line-height: 52px;
-    margin-left: 45px;
+    margin-left: 0;
     margin-bottom: 0;
     margin-top: 3px;
   }
@@ -2874,13 +2913,11 @@ button,
   .promo__info h4 {
     font-size: 12px;
     line-height: 18px;
-    margin-left: 45px;
-    margin-bottom: 26px;
-    margin-top: 0;
+    margin: 0 auto 26px;
   }
 
   .promo__info a {
-    width: 70%;
+    width: 202px;
     height: 41px;
     font-size: 8px;
     line-height: 10px;
@@ -2901,16 +2938,37 @@ button,
     margin: 0 auto 40px;
   }
 
+  .glide {
+    max-width: 616px;
+  }
+
+  .glide__track {
+    padding-left: 12px;
+  }
+
   .glide__card {
-    width: 100%;
+    width: 268px;
   }
 
   .glide__info {
-    width: 100%;
+    width: 266px;
+    left: 0;
+  }
+
+  .glide__list {
+    width: 63%;
+  }
+
+  .glide__arrow--left {
+    left: -8.4%;
+  }
+
+  .glide__arrow--right {
+    right: -8.4%;
   }
 
   .advantages__wrapper {
-    width: 95%;
+    width: 90%;
     margin: 100px auto 54px;
   }
 
@@ -2928,8 +2986,8 @@ button,
     grid-template-rows: 160px 239px 160px;
   }
 
-  .advantages__list::before,
-  .advantages__list::after {
+  .advantages__item--area::before,
+  .advantages__item--parking::before {
     display: none;
   }
 
@@ -2942,11 +3000,11 @@ button,
   }
 
   .advantages__item--area .advantages__numbers {
-    margin-left: 25px;
+    margin-left: 7px;
   }
 
   .advantages__item--places .advantages__numbers {
-    margin-left: 27px;
+    margin-left: 7px;
   }
 
   .advantages__numbers strong {
@@ -2972,7 +3030,7 @@ button,
     -ms-grid-column-span: 2;
     grid-column: 1/3;
     max-width: none;
-    width: 61%;
+    width: 64%;
     margin: 0 auto;
   }
 
@@ -2988,7 +3046,7 @@ button,
   }
 
   .advantages__item--blue h6 {
-    margin: 0 auto;
+    margin: 0 auto 39px;
   }
 
   .sales__wrapper {
@@ -3055,21 +3113,24 @@ button,
     grid-template-rows: 324px 1fr;
   }
 
+  .contacts__form div {
+    width: 65%;
+  }
+
   .contacts__form h2 {
     font-size: 42px;
     line-height: 42px;
-    margin-left: 133px;
     margin-top: 72px;
     margin-bottom: 35px;
   }
 
   .contacts__form form {
-    width: 62%;
-    margin-left: 133px;
+    width: 100%;
   }
 
   .contacts__form ul {
     grid-gap: 55px;
+    width: 95%;
   }
 
   .contacts__form button {
@@ -3077,25 +3138,31 @@ button,
     margin-top: 28px;
     padding-top: 16px;
     padding-left: 19px;
+    width: 95%;
+  }
+
+  .contacts__info {
+    width: 65%;
+    margin: 0 auto;
   }
 
   .contacts__info h2 {
     font-size: 42px;
     line-height: 42px;
-    margin-left: 133px;
+    margin-left: 0;
     margin-bottom: 30px;
   }
 
   .contacts__list {
-    grid-gap: 96px;
-    margin-bottom: 42px;
-    margin-left: 133px;
+    width: 100%;
+    grid-gap: 35px;
+    margin: 0 auto 42px;
   }
 
   .contacts__list::before {
-    height: 129px;
+    height: 78%;
     top: 5%;
-    left: 58%;
+    left: 53%;
   }
 
   .contacts__column h3 {
@@ -3253,8 +3320,8 @@ button,
   }
 
   .gym__visual {
-    width: 100%;
-    margin: 0;
+    width: 320px;
+    margin: 0 auto;
   }
 
   .gym__visual-picture img {
@@ -3383,8 +3450,12 @@ button,
     width: 100%;
   }
 
+  .promo__picture img {
+    width: 100%;
+  }
+
   .coaches__wrapper {
-    width: 70%;
+    width: 226px;
     margin-bottom: 70px;
   }
 
@@ -3394,7 +3465,12 @@ button,
     margin-bottom: 43px;
   }
 
+  .glide__track {
+    padding-left: 0;
+  }
+
   .glide__card {
+    width: 226px;
     height: 100%;
   }
 
@@ -3403,12 +3479,12 @@ button,
   }
 
   .glide__card img {
-    width: 100%;
+    width: 226px;
     height: 276px;
   }
 
   .glide__info {
-    width: 100%;
+    width: 226px;
     height: 100%;
   }
 
@@ -3513,7 +3589,7 @@ button,
   }
 
   .advantages__item--blue h6 {
-    margin: 0 auto 20px;
+    margin: 0 auto 44px;
   }
 
   .sales__wrapper {
@@ -3608,16 +3684,21 @@ button,
     top: 47%;
   }
 
+  .feedbacks__carousel button img {
+    width: 10px;
+    height: 19px;
+  }
+
   .carousel__button-next {
-    right: -6px;
+    right: -40px;
   }
 
   .carousel__button-prev {
-    left: -6px;
+    left: -38px;
   }
 
   .carousel__item--active {
-    width: 78%;
+    width: 226px;
     padding: 5px;
     margin: 0 auto;
   }
@@ -3627,6 +3708,10 @@ button,
     grid-template-columns: 1fr;
     -ms-grid-rows: 386px 1fr;
     grid-template-rows: 386px 1fr;
+  }
+
+  .contacts__form div {
+    width: 100%;
   }
 
   .contacts__form h2 {
@@ -3657,6 +3742,11 @@ button,
 
   .contacts__form button {
     margin-top: 39px;
+    width: 100%;
+  }
+
+  .contacts__info {
+    width: 100%;
   }
 
   .contacts__info h2 {
@@ -3747,7 +3837,7 @@ button,
   }
 
   .page-footer__social {
-    width: 49%;
+    width: 51%;
     margin: 0;
     -webkit-box-align: center;
     -ms-flex-align: center;

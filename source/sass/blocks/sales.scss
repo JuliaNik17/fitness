@@ -120,10 +120,6 @@
   line-height: 109px;
   font-weight: 700;
   margin-top: -25px;
-
-  @include vp-767 {
-    // margin-bottom: 30px;
-  }
 }
 
 .sales__red-info p {
@@ -174,7 +170,7 @@
   display: grid;
   padding-left: 0;
   grid-template-columns: 1fr;
-  grid-template-rows: 211px 211px;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 40px;
 
   @include vp-1199 {
@@ -224,6 +220,7 @@
   font-weight: 400;
   margin: 0;
   margin-left: 5px;
+  margin-bottom: 20px;
 }
 
 .sales__item a {
@@ -234,7 +231,6 @@
   font-size: 12px;
   line-height: 14px;
   font-weight: 700;
-  // letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-top: auto;
   margin-bottom: 7px;
