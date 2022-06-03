@@ -235,11 +235,13 @@
     grid-gap: 0;
     margin: 0 16px 42px;
   }
+}
 
+.contacts__column--first {
   &::before {
     content: "";
     width: 1px;
-    height: 77%;
+    height: 91%;
     background-color: $color-light-slate-grey;
     position: absolute;
     top: 7px;
@@ -254,6 +256,18 @@
     @include vp-767 {
       display: none;
     }
+  }
+}
+
+.contacts__column--first ul {
+  @include vp-1199 {
+    width: 90%;
+    padding-right: 10px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-right: 0;
   }
 }
 
